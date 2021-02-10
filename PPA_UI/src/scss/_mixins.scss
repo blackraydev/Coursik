@@ -1,0 +1,11 @@
+@mixin flexCenter($direction, $alignPosition, $justifyPosition) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyPosition;
+    align-items: $alignPosition;
+}
+
+@mixin topBorderRadius() {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}

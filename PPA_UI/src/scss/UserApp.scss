@@ -1,0 +1,102 @@
+@import "./mixins";
+@import "./variables";
+
+.user_app {
+    @include flexCenter(row, center, center);
+
+    width: 100%;
+    height: 100vh;
+    background: rgb(80, 80, 95);
+
+    .container {
+        @include flexCenter(row, space-evenly, center);
+        
+        width: 90%;
+        height: 90%;
+        border-radius: 50px;
+
+        .navbar {
+            @include flexCenter(column, flex-start, flex-start);
+            
+            height: 100%;
+            width: 20%;
+            background: linear-gradient(45deg, rgb(30, 30, 35), rgb(40, 42, 50));
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+
+            .logo {
+                width: 100%;
+                padding: 50px 35px;
+                color: white;
+            }
+
+            .tabs {
+                @include flexCenter(column, flex-start, flex-start);
+
+                padding: 50px 35px;
+            }
+
+            .logout {
+                @include flexCenter(column, flex-start, flex-start);
+
+                padding: 50px 35px;
+            }
+
+            .link {
+                @include flexCenter(row, center, center);
+
+                margin: 15px 0;
+                color: rgb(110, 111, 115);
+
+                .icon {
+                    fill: rgb(110, 111, 115);
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 20px;
+                }
+
+                .icon-task {
+                    background: rgb(110, 111, 115);
+                    border-radius: 100%;
+                    border: 1px solid rgb(110, 111, 115);
+
+                    .outer {
+                        fill: rgb(35, 36, 42);
+                    }
+
+                    .inner {
+                        fill: rgb(110, 111, 115);
+                    }
+                }
+            }
+
+            .focused {
+                color: rgb(225, 225, 225);
+
+                .icon {
+                    fill: rgb(225, 225, 225);
+                }
+
+                .icon-task {
+                    background: rgb(225, 225, 225);
+                    border: 1px solid rgb(225, 225, 225);
+
+                    .inner {
+                        fill: rgb(225, 225, 225);
+                    }
+                }
+            }
+        }
+
+        .content {
+            @include flexCenter(column, flex-start, flex-start);
+
+            overflow: scroll;
+            height: 100%;
+            width: 80%;
+            background: linear-gradient(30deg, rgb(21, 22, 26), rgb(58, 59, 72));
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+    }
+}

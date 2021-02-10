@@ -1,0 +1,91 @@
+@import "./mixins";
+@import "./variables";
+
+.task_item {
+    @include flexCenter(row, center, space-between);
+
+    transition: 0.15s ease-out;
+    font-size: 14px;
+    font-weight: 300;
+    height: 45px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid rgb(87, 87, 107);
+    }
+    
+    &:hover {
+        background: rgb(73, 73, 90);
+    }
+
+    .content_holder {
+        @include flexCenter(row, center, space-between);
+
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+
+        .text_holder {
+            @include flexCenter(row, center, center);
+
+            .text {
+                color: white;
+                margin-left: 10px;
+            }
+        }
+
+        .date_holder {
+            @include flexCenter(row, center, center);
+
+            margin-right: 15px;
+    
+            .current_date {
+                color: $currentDueDate;
+            }
+    
+            .future_date {
+                color: $futureDueDate;
+            }
+    
+            .past_date {
+                color: $pastDueDate;
+            }
+        }
+    }
+
+    .icon_holder {
+        @include flexCenter(column, center, center);
+
+        cursor: pointer;
+        margin-left: 15px;
+        border-radius: 100%;
+        width: 19px;
+        height: 19px;
+
+        .icon-task {
+            width: 19px;
+            height: 19px;
+            border-radius: 100%;
+            border: 1px solid white;
+            background: white;
+            transition: 0.15s ease-out;
+
+            .outer {
+                transition: 0.15s ease-out;
+                fill: white;
+            }
+
+            .inner {
+                transition: 0.15s ease-out;
+                fill: #5c636d;
+            }
+
+            &:hover {
+                border: 1px solid rgb(37, 232, 200);
+
+                .inner {
+                    fill: rgb(37, 232, 200);
+                }
+            }
+        }
+    }
+}

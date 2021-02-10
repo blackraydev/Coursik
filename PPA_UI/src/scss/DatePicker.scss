@@ -1,0 +1,115 @@
+@import "./mixins";
+@import "./variables";
+
+.date_picker {
+    @include flexCenter(column, center, flex-start);
+
+    position: absolute;
+    top: 38px;
+    left: 83px;
+    height: 300px;
+    width: 275px;
+    border-radius: 25px;
+    background: rgb(80, 80, 95);
+    padding: 15px;
+
+    .month_handler {
+        @include flexCenter(row, center, space-between);
+
+        width: 100%;
+        height: 30px;
+
+        .month {
+            font-size: 13px;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: rgb(230, 230, 240);
+        }
+
+        .icon_holder {
+            @include flexCenter(row, center, center);
+
+            transition: 0.15s ease-out;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+
+            .icon {
+                fill: rgb(210, 210, 225);
+                width: 16px;
+                height: 16px;
+            }
+
+            &:hover {
+                background: rgb(70, 70, 85);
+            }
+        }
+    }
+
+    .calendar {
+        width: 100%;
+        margin-top: 5px;
+        height: 240px;
+
+        .week_days_holder {
+            @include flexCenter(row, center, space-between);
+
+            width: 100%;
+
+            .week_day {
+                @include flexCenter(row, center, center);
+
+                font-size: 13px;
+                font-weight: 300;
+                text-transform: uppercase;
+                width: 14%;
+                height: 34px;
+                color: rgb(165, 165, 182);
+            }
+        }
+
+        .all_days_holder {
+            @include flexCenter(row, center, space-between);
+
+            width: 100%;
+            flex-wrap: wrap;
+
+            .day {
+                @include flexCenter(row, center, center);
+
+                cursor: pointer;
+                transition: 0.15s ease-out;
+                font-size: 13px;
+                font-weight: 300;
+                text-transform: uppercase;
+                width: 14%;
+                height: 34px;
+                border-radius: 25px;
+
+                &:hover {
+                    background: rgb(90, 90, 105);
+                }
+            }
+
+            .current_day {
+                border: 1px solid rgb(120, 120, 135);
+            }
+
+            .selected_day {
+                background: rgb(120, 120, 135);
+
+                &:hover {
+                    background: rgb(120, 120, 135);
+                }
+            }
+
+            .day_current_month {
+                color: rgb(230, 230, 240);
+            }
+
+            .day_other_month {
+                color:  rgb(165, 165, 182);
+            }
+        }
+    }
+}

@@ -1,0 +1,311 @@
+.task_modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: initial;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.task_modal .modal_window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 500px;
+  height: 400px;
+  padding: 25px;
+  z-index: 2;
+  border-radius: 25px;
+  background: #414150;
+}
+
+.task_modal .modal_window .task_name {
+  background: inherit;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+}
+
+.task_modal .modal_window .task_name::-webkit-input-placeholder {
+  color: #787882;
+}
+
+.task_modal .modal_window .task_name:-ms-input-placeholder {
+  color: #787882;
+}
+
+.task_modal .modal_window .task_name::-ms-input-placeholder {
+  color: #787882;
+}
+
+.task_modal .modal_window .task_name::placeholder {
+  color: #787882;
+}
+
+.task_modal .modal_window .who_where {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task_modal .modal_window .who_where span {
+  width: 25px;
+  font-weight: 300;
+  font-size: 16px;
+  color: #787882;
+}
+
+.task_modal .modal_window .who_where select {
+  background: #414150;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 15px;
+}
+
+.task_modal .modal_window .date_picker_part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.task_modal .modal_window .date_picker_part .due_date {
+  font-weight: 300;
+  font-size: 16px;
+  color: #787882;
+}
+
+.task_modal .modal_window .date_picker_part .date_picker_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  cursor: pointer;
+  height: 35px;
+  min-width: 95px;
+  margin-left: 10px;
+  padding: 0 10px;
+  border-radius: 25px;
+}
+
+.task_modal .modal_window .date_picker_part .date_picker_holder .icon {
+  width: 16px;
+  height: 16px;
+  fill: #a0a0b4;
+}
+
+.task_modal .modal_window .date_picker_part .date_picker_holder .date {
+  font-weight: 300;
+  font-size: 16px;
+  margin-left: 10px;
+  color: #a0a0b4;
+}
+
+.task_modal .modal_window .date_picker_part .date_picker_holder:hover {
+  background: #555569;
+}
+
+.task_modal .modal_window .date_picker_part .future_due_date .date {
+  color: whitesmoke;
+}
+
+.task_modal .modal_window .date_picker_part .future_due_date .icon {
+  fill: whitesmoke;
+}
+
+.task_modal .modal_window .date_picker_part .current_due_date .date {
+  color: #abeb76;
+}
+
+.task_modal .modal_window .date_picker_part .current_due_date .icon {
+  fill: #abeb76;
+}
+
+.task_modal .modal_window .date_picker_part .past_due_date .date {
+  color: #ed4758;
+}
+
+.task_modal .modal_window .date_picker_part .past_due_date .icon {
+  fill: #ed4758;
+}
+
+.task_modal .modal_window .date_picker_part .remove_icon_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.task_modal .modal_window .date_picker_part .remove_icon_holder .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.task_modal .modal_window .date_picker_part .remove_icon_holder .icon .outer {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  fill: #50505a;
+}
+
+.task_modal .modal_window .date_picker_part .remove_icon_holder .icon .inner {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  fill: #d7d7d7;
+}
+
+.task_modal .modal_window .date_picker_part .remove_icon_holder:hover .outer {
+  fill: #64646e;
+}
+
+.task_modal .modal_window .date_picker_part .remove_icon_holder:hover .inner {
+  fill: white;
+}
+
+.task_modal .modal_window .description_box {
+  background: #414150;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+
+.task_modal .modal_window .description_box::-webkit-input-placeholder {
+  color: #787882;
+}
+
+.task_modal .modal_window .description_box:-ms-input-placeholder {
+  color: #787882;
+}
+
+.task_modal .modal_window .description_box::-ms-input-placeholder {
+  color: #787882;
+}
+
+.task_modal .modal_window .description_box::placeholder {
+  color: #787882;
+}
+
+.task_modal .modal_window .submit_part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 60px;
+  width: 100%;
+}
+
+.task_modal .modal_window .submit_part .submit_task {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  cursor: pointer;
+  width: 125px;
+  height: 40px;
+  border-radius: 25px;
+  background: #555569;
+  color: white;
+  font-size: 16px;
+}
+
+.task_modal .modal_window .submit_part .submit_task:hover {
+  background: #49495d;
+  color: white;
+}
+
+.task_modal .modal_window .submit_part .submit_task:disabled {
+  cursor: unset;
+  background: #373746;
+  color: #737373;
+}
+
+.task_modal .overlay {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

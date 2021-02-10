@@ -1,0 +1,15 @@
+@import "./mixins";
+@import "./variables";
+
+.guest_app {
+    @include flexCenter(column, space-evenly, flex-start);
+        
+    width: 90%;
+    height: 90%;
+    border-radius: 50px;
+    background: linear-gradient(45deg, rgb(25, 26, 31), rgb(58, 59, 72));
+
+    .content {
+        height: 80%;
+    }
+}

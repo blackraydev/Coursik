@@ -1,0 +1,43 @@
+@import "./mixins";
+@import "./variables";
+
+.navbar {
+    @include flexCenter(row, center, flex-end);
+
+    height: 20%;
+
+    .buttons {
+        @include flexCenter(row, center, space-between);
+
+        width: 100%;
+
+        .link {
+            @include flexCenter(row, center, center);
+
+            min-width: 100px;
+            height: 35px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: .15s ease-out;
+            text-transform: uppercase;
+            color: rgb(103, 106, 124);
+
+            &:hover, &:focus {
+                background: rgb(65, 65, 80);
+                color: rgb(216, 216, 231);
+            }
+        }
+
+        .logo {
+            width: 150px;
+            margin-left: 100px;
+        }
+
+        .auth_methods {
+            @include flexCenter(row, center, space-between);
+
+            width: 225px;
+            margin-right: 100px;
+        }
+    }
+}

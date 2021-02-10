@@ -1,0 +1,111 @@
+@import "./mixins";
+@import "./variables";
+
+.home_component {
+    @include flexCenter(column, flex-start, flex-start);
+
+    width: 100%;
+    height: 80%;
+    padding: 0 100px 25px 100px;
+    overflow: scroll;
+
+    .tasks_due_soon {
+        width: 600px;
+        color: white;
+        font-size: 18px;
+
+        .title_handler {
+            @include flexCenter(row, center, flex-start);
+
+            padding: 10px 0;
+
+            .title_with_icon {
+                cursor: pointer;
+
+                .title {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .tasks {
+            transition: 0.25s ease-out;
+            border-radius: 20px;
+            background: rgb(65, 65, 80);
+            overflow: hidden;
+        }
+
+        .tasks-hidden {
+            height: 0;
+        }
+    }
+
+    .recent_projects {
+        margin-top: 25px;
+        width: 500px;
+        color: white;
+        font-size: 18px;
+
+        .title_handler {
+            @include flexCenter(row, center, flex-start);
+
+            padding: 10px 0;
+
+            .title_with_icon {
+                cursor: pointer;
+
+                .title {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .projects {
+            @include flexCenter(row, center, flex-start);
+
+            transition: 0.25s ease-out;
+            overflow: hidden;
+            margin-top: 15px;
+
+            .project {
+                @include flexCenter(column, center, center);
+
+                transition: 0.25s ease-out;
+                padding: 15px;
+                margin-top: 5px;
+                margin-right: 50px;
+                cursor: pointer;
+                border-radius: 25px;
+
+                .img_holder {
+                    width: 125px;
+                    height: 125px;
+                    border-radius: 25px;
+                    border: 1px dashed rgb(150, 150, 150);
+                }
+
+                .project_title {
+                    text-align: center;
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    background: rgb(40, 41, 49);
+                }
+            }
+        }
+
+        .projects-hidden {
+            height: 0;
+        }
+    }
+
+    .triangle {
+        fill: rgb(161, 156, 156);
+        width: 20px;
+        height: 20px;
+        transform: translateY(4px);
+    }
+}

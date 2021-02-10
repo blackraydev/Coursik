@@ -1,0 +1,23 @@
+.guest_app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  width: 90%;
+  height: 90%;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #191a1f, #3a3b48);
+}
+
+.guest_app .content {
+  height: 80%;
+}

@@ -1,0 +1,148 @@
+.task_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  font-size: 14px;
+  font-weight: 300;
+  height: 45px;
+}
+
+.task_item:not(:last-child) {
+  border-bottom: 1px solid #57576b;
+}
+
+.task_item:hover {
+  background: #49495a;
+}
+
+.task_item .content_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.task_item .content_holder .text_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task_item .content_holder .text_holder .text {
+  color: white;
+  margin-left: 10px;
+}
+
+.task_item .content_holder .date_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 15px;
+}
+
+.task_item .content_holder .date_holder .current_date {
+  color: #abeb76;
+}
+
+.task_item .content_holder .date_holder .future_date {
+  color: whitesmoke;
+}
+
+.task_item .content_holder .date_holder .past_date {
+  color: #ed4758;
+}
+
+.task_item .icon_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin-left: 15px;
+  border-radius: 100%;
+  width: 19px;
+  height: 19px;
+}
+
+.task_item .icon_holder .icon-task {
+  width: 19px;
+  height: 19px;
+  border-radius: 100%;
+  border: 1px solid white;
+  background: white;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.task_item .icon_holder .icon-task .outer {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  fill: white;
+}
+
+.task_item .icon_holder .icon-task .inner {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  fill: #5c636d;
+}
+
+.task_item .icon_holder .icon-task:hover {
+  border: 1px solid #25e8c8;
+}
+
+.task_item .icon_holder .icon-task:hover .inner {
+  fill: #25e8c8;
+}

@@ -1,0 +1,39 @@
+@import "./mixins";
+@import "./variables";
+
+.description {
+    @include flexCenter(column, flex-start, flex-start);
+
+    width: 500px;
+    margin: 50px 100px;
+
+    h1 {
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    p {
+        margin-bottom: 50px;
+        font-weight: 300;
+        color: rgb(190, 190, 190);
+    }
+
+    .create-project {
+        cursor: pointer;
+        background: inherit;
+        color: rgb(103, 106, 124);
+        width: 75%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 24px;
+        transition: 0.25s ease-out;
+        border: 1px solid rgb(65, 65, 80);
+
+        &:hover {
+            background: rgb(65, 65, 80);
+            color: rgb(216, 216, 231);
+        }
+    }
+}

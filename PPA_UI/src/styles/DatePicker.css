@@ -1,0 +1,192 @@
+.date_picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 38px;
+  left: 83px;
+  height: 300px;
+  width: 275px;
+  border-radius: 25px;
+  background: #50505f;
+  padding: 15px;
+}
+
+.date_picker .month_handler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 30px;
+}
+
+.date_picker .month_handler .month {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #e6e6f0;
+}
+
+.date_picker .month_handler .icon_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.date_picker .month_handler .icon_holder .icon {
+  fill: #d2d2e1;
+  width: 16px;
+  height: 16px;
+}
+
+.date_picker .month_handler .icon_holder:hover {
+  background: #464655;
+}
+
+.date_picker .calendar {
+  width: 100%;
+  margin-top: 5px;
+  height: 240px;
+}
+
+.date_picker .calendar .week_days_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.date_picker .calendar .week_days_holder .week_day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 14%;
+  height: 34px;
+  color: #a5a5b6;
+}
+
+.date_picker .calendar .all_days_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.date_picker .calendar .all_days_holder .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 14%;
+  height: 34px;
+  border-radius: 25px;
+}
+
+.date_picker .calendar .all_days_holder .day:hover {
+  background: #5a5a69;
+}
+
+.date_picker .calendar .all_days_holder .current_day {
+  border: 1px solid #787887;
+}
+
+.date_picker .calendar .all_days_holder .selected_day {
+  background: #787887;
+}
+
+.date_picker .calendar .all_days_holder .selected_day:hover {
+  background: #787887;
+}
+
+.date_picker .calendar .all_days_holder .day_current_month {
+  color: #e6e6f0;
+}
+
+.date_picker .calendar .all_days_holder .day_other_month {
+  color: #a5a5b6;
+}
