@@ -1,0 +1,12 @@
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/bin/Debug/net5.0/PPA_DB.deps.json
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/bin/Debug/net5.0/PPA_DB.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/bin/Debug/net5.0/ref/PPA_DB.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/bin/Debug/net5.0/PPA_DB.pdb
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/obj/Debug/net5.0/PPA_DB.csprojAssemblyReference.cache
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/obj/Debug/net5.0/PPA_DB.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/obj/Debug/net5.0/PPA_DB.AssemblyInfoInputs.cache
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/obj/Debug/net5.0/PPA_DB.AssemblyInfo.cs
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/obj/Debug/net5.0/PPA_DB.csproj.CoreCompileInputs.cache
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/obj/Debug/net5.0/PPA_DB.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/obj/Debug/net5.0/ref/PPA_DB.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/obj/Debug/net5.0/PPA_DB.pdb

@@ -1,0 +1,15 @@
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/bin/Debug/net5.0/PPA_Core.deps.json
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/bin/Debug/net5.0/PPA_Core.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/bin/Debug/net5.0/ref/PPA_Core.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/bin/Debug/net5.0/PPA_Core.pdb
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/bin/Debug/net5.0/PPA_DB.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/bin/Debug/net5.0/PPA_DB.pdb
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/PPA_Core.csprojAssemblyReference.cache
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/PPA_Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/PPA_Core.AssemblyInfoInputs.cache
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/PPA_Core.AssemblyInfo.cs
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/PPA_Core.csproj.CoreCompileInputs.cache
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/PPA_Core.csproj.CopyComplete
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/PPA_Core.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/ref/PPA_Core.dll
+/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/Debug/net5.0/PPA_Core.pdb
