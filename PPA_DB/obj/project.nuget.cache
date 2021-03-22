@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Oheu4QFiJYTxM39rGulcEjfOqeOWGyVMUsbB0EuY12LdiUcSX5LmWjwT7QRpzmGq8nPEa+AbQwWIE+L79jJaPA==",
+  "dgSpecHash": "3hrSq+9LU55CbXmLR6GmQm2cFPYGefXATLLxUqDaXG7CKO7LleOrbPI2Z/Ba/0oFTlFQIgyhb12EpT/Axx2RQA==",
   "success": true,
-  "projectFilePath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/PPA_DB.csproj",
+  "projectFilePath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_DB/PPA_DB.csproj",
   "expectedPackageFiles": [
     "/Users/ramilsagidullin/.nuget/packages/microsoft.entityframeworkcore/5.0.2/microsoft.entityframeworkcore.5.0.2.nupkg.sha512",
     "/Users/ramilsagidullin/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.2/microsoft.entityframeworkcore.abstractions.5.0.2.nupkg.sha512",

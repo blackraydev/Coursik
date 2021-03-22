@@ -12,11 +12,11 @@ namespace PPA_Core {
             _context = context;
         }
 
-        public List<Task> GetTasks(int id) {
+        public List<Task> GetTasks(int userId) {
             List<Task> userTasks = new List<Task>();
 
             foreach (Task task in _context.Tasks) {
-                if (task.User_Id == id) {
+                if (task.User_Id == userId) {
                     userTasks.Add(task);
                 }
             }
@@ -43,13 +43,24 @@ namespace PPA_Core {
             return task;
         }
 
-        public Task DeleteTask(int id) {
+        public int DeleteTask(int id) {
             var deletedTask = _context.Tasks.FirstOrDefault(tempTask => tempTask.Id == id);
             
             _context.Tasks.Remove(deletedTask);
             _context.SaveChanges();
-            
-            return deletedTask;
+
+            return id;
+        }
+
+        public List<Task> UpdateTasksStatus(Task[] tasks) {
+            foreach (Task task in tasks) {
+                var oldTask = _context.Tasks.FirstOrDefault(tempTask => tempTask.Id == task.Id);
+                _context.Tasks.Remove(oldTask);
+                _context.Tasks.Add(task);
+                _context.SaveChanges();
+            }
+
+            return tasks.ToList();
         }
     }
 }

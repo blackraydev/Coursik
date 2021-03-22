@@ -8,7 +8,7 @@ const NavBar = () => {
             <div className="logo"></div>
             <div className="buttons">
                 <div className="logo">
-                    <NavLink className="link" to="/">Description</NavLink>
+                    <NavLink className="link" to="/">Coursik</NavLink>
                 </div>
                 <div className="auth_methods">
                     <NavLink className="link" to="/login"> Login </NavLink>

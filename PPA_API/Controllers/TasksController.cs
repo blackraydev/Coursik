@@ -35,5 +35,10 @@ namespace PPA_API.Controllers {
         public IActionResult DeleteTask(int id) {
             return Ok(_taskServices.DeleteTask(id));
         }
+        
+        [HttpPost("update_status")]
+        public IActionResult UpdateTasksStatus(Task[] tasks) {
+            return Ok(_taskServices.UpdateTasksStatus(tasks));
+        }
     }
 }

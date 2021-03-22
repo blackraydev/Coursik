@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { briefMonths, TODAY, TOMORROW, YESTERDAY } from "../../constants/dateConstants";
 import { deleteTaskRequest } from "../../services/taskServices";
 import { TaskIcon } from "../Common/Icons";
-import CreateModal from "./TaskModal";
+import TaskModal from "./TaskModal";
 import { UPDATE } from "../../constants/modalConstants";
 import "../../styles/TaskItem.css";
 
@@ -59,7 +59,7 @@ const TaskItem = ({ task }) => {
                     <span className={ classNameDueDate }>{ dueDateLabel }</span>
                 </div>
             </div>
-            { openModal ? <CreateModal task={task} closeModal={() => setOpenModal(false)} type={UPDATE}/> : null }
+            { openModal ? <TaskModal task={task} closeModal={() => setOpenModal(false)} type={UPDATE}/> : null }
         </div>
     );
 }

@@ -1,19 +1,23 @@
 .home_component {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: start;
+  -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  height: 80%;
+  height: 85%;
   padding: 0 100px 25px 100px;
   overflow: scroll;
 }
@@ -22,20 +26,25 @@
   width: 600px;
   color: white;
   font-size: 18px;
+  margin-bottom: 25px;
 }
 
 .home_component .tasks_due_soon .title_handler {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0;
@@ -51,8 +60,10 @@
 
 .home_component .tasks_due_soon .tasks {
   -webkit-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
   transition: 0.25s ease-out;
-  border-radius: 20px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
   background: #414150;
   overflow: hidden;
 }
@@ -70,16 +81,20 @@
 
 .home_component .recent_projects .title_handler {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0;
@@ -95,19 +110,24 @@
 
 .home_component .recent_projects .projects {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
   transition: 0.25s ease-out;
   overflow: hidden;
   margin-top: 15px;
@@ -115,31 +135,38 @@
 
 .home_component .recent_projects .projects .project {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
   transition: 0.25s ease-out;
   padding: 15px;
   margin-top: 5px;
   margin-right: 50px;
   cursor: pointer;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
 }
 
 .home_component .recent_projects .projects .project .img_holder {
   width: 125px;
   height: 125px;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
   border: 1px dashed #969696;
 }
 
@@ -151,6 +178,7 @@
 
 .home_component .recent_projects .projects .project:hover {
   -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
           transform: translateY(-5px);
   background: #282931;
 }
@@ -164,5 +192,6 @@
   width: 20px;
   height: 20px;
   -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
           transform: translateY(4px);
 }

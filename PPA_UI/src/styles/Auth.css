@@ -1,15 +1,19 @@
 .auth {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 80%;
@@ -22,15 +26,17 @@
 
 .auth input {
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   background: #414150;
-  color: #e1e1e1;
+  color: #ebebeb;
   font-size: 16px;
   height: 50px;
   width: 350px;
   margin: 15px 0;
   padding: 0 15px;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
 }
 
 .auth input:focus {
@@ -40,16 +46,20 @@
 
 .auth .toggler {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
   width: 350px;
@@ -59,14 +69,16 @@
   position: relative;
   width: 60px;
   height: 34px;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
 }
 
 .auth .toggler .switcher input {
   opacity: 0;
   width: 0;
   height: 0;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
 }
 
 .auth .toggler .switcher input:checked + .slider {
@@ -75,21 +87,26 @@
 
 .auth .toggler .switcher input:checked + .slider:before {
   -webkit-transform: translateX(25px);
+      -ms-transform: translateX(25px);
           transform: translateX(25px);
 }
 
 .auth .toggler .switcher .slider {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
@@ -99,9 +116,11 @@
   right: 0;
   bottom: 0;
   -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
   border: 1px solid #414150;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
 }
 
 .auth .toggler .switcher .slider:before {
@@ -114,6 +133,7 @@
   bottom: 4px;
   background-color: #e1e1e1;
   -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -133,11 +153,13 @@
 }
 
 .auth .toggler .switcher .round {
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
 }
 
 .auth .toggler .switcher .round:before {
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 
 .auth .confirm {
@@ -147,9 +169,11 @@
   width: 200px;
   height: 50px;
   margin-top: 35px;
-  border-radius: 50px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
   font-size: 20px;
   -webkit-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
   transition: 0.25s ease-out;
   border: 1px solid #414150;
 }

@@ -1,24 +1,34 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createTaskRequest, updateTaskRequest } from "../../services/taskServices";
 import { DateIcon, RemoveIcon } from "../Common/Icons";
 import DatePicker from "./DatePicker";
 import { briefMonths, NODUEDATE, TODAY, TOMORROW, YESTERDAY } from "../../constants/dateConstants";
 import { CREATE, UPDATE } from "../../constants/modalConstants";
+import { getProjectsRequest } from "../../services/projectServices";
+import { getRequest } from "../../services/authServices";
+import { TO_DO } from "../../constants/taskConstants";
 import "../../styles/TaskModal.css";
 
-const CreateModal = ({ task, closeModal, type }) => {
+const TaskModal = ({ task, closeModal, type, category, currentProject, priority }) => {
+    const projects = useSelector(store => store.projects);
+    const tasks = useSelector(store => store.tasks);
     const [taskName, setTaskName] = useState(task && task.name || "");
     const [description, setDescription] = useState(task && task.description || "");
-    const [selectProject, setSelectProject] = useState(true);
+    const [projectId, setProjectId] = useState(currentProject && currentProject.id || task && task.project_Id|| null);
     const [showDatePicker, setShowDatePicker] = useState(false);
     const [dueDate, setDueDate] = useState(task && task.due_Date && new Date(task.due_Date) || null);
     const [isDueDate, setIsDueDate] = useState(!!(task && task.due_Date));
     const [labelDueDate, setLabelDueDate] = useState(NODUEDATE);
+    const [user, setUser] = useState("");
     const taskNameInput = useRef();
     const dispatch = useDispatch();
 
     useEffect(() => type === CREATE ? taskNameInput.current.focus() : null, []);
+    
+    useEffect(async () => await getProjectsRequest(getUserId(), dispatch), []);
+
+    useEffect(async () => await getRequest(getUserId()).then(usr => setUser(usr)), []);
 
     useEffect(() => {
         if (!isDueDate) {
@@ -67,11 +77,12 @@ const CreateModal = ({ task, closeModal, type }) => {
     }
 
     const updateTask = async () => {
-        console.log(task);
-
         const updatedTask = {
             id: task.id,
             user_Id: getUserId(),
+            project_Id: projectId,
+            category: task.category || category || TO_DO,
+            priority: task.priority,
             name: taskName.trim(),
             description: description,
             due_Date: dueDate
@@ -83,8 +94,15 @@ const CreateModal = ({ task, closeModal, type }) => {
     }
 
     const createTask = async () => {
+        const newPriority = tasks.filter(task => task.user_Id == getUserId() && 
+                                                 task.project_Id == projectId && 
+                                                 task.category == TO_DO).length;
+        console.log(tasks);
         const newTask = {
             user_Id: getUserId(),
+            project_Id: projectId != 0 ? projectId : null,
+            category: category || TO_DO,
+            priority: priority || newPriority || 0,
             name: taskName.trim(),
             description: description,
             assign_Date: new Date(),
@@ -96,20 +114,11 @@ const CreateModal = ({ task, closeModal, type }) => {
             .catch(e => console.log(e));
     }
 
-    const getUserId = () => sessionStorage.getItem("id");
+    const getUserId = () => localStorage.getItem("id");
 
     const removeDueDateHandler = () => {
         setDueDate(null);
         setIsDueDate(false);
-    }
-
-    const renderProjectSellector = () => {
-        return(
-            <select className="choose_project">
-                <option>IT Project Plan</option>
-                <option>IT Request</option>
-            </select>
-        )
     }
 
     return(
@@ -124,11 +133,19 @@ const CreateModal = ({ task, closeModal, type }) => {
                 <div className="who_where">
                     <span>For</span>
                     <select className="assign">
-                        <option>black2001ray@mail.ru</option>
-                        <option>sagidullin-7900@mail.ru</option>
+                        <option>{user.login}</option>
                     </select>
                     <span>in</span>
-                    { selectProject ? renderProjectSellector() : null }
+                    <select onChange={e => setProjectId(e.target.value)} className="choose_project">
+                        <option value={ 0 }>No Project</option>
+                        { 
+                            projects.map(project => 
+                                <option value={ project.id } 
+                                        selected={ currentProject ? project.name === currentProject.name 
+                                                   : task ? task.project_Id === project.id : false }
+                                >{ project.name }</option>) 
+                        }
+                    </select>
                 </div>
                 <div className="date_picker_part">
                     <span className="due_date">Due date</span>
@@ -167,4 +184,4 @@ const CreateModal = ({ task, closeModal, type }) => {
     )
 }
 
-export default CreateModal;
+export default TaskModal;

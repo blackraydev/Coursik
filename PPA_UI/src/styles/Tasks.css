@@ -1,19 +1,23 @@
 .tasks_component {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: start;
+  -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  height: 80%;
+  height: 85%;
   padding: 0 100px 25px 100px;
   overflow: scroll;
 }
@@ -27,16 +31,20 @@
 
 .tasks_component .task_handler .title_handler {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0;
@@ -48,14 +56,17 @@
 
 .tasks_component .task_handler .tasks {
   -webkit-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
   transition: 0.25s ease-out;
-  border-radius: 20px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
   background: #414150;
   overflow: hidden;
 }
 
 .tasks_component .task_handler .tasks .task {
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   cursor: pointer;
   color: #ebebeb;
@@ -81,6 +92,7 @@
   width: 20px;
   height: 20px;
   -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
           transform: translateY(4px);
   margin-right: 10px;
 }

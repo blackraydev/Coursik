@@ -6,6 +6,8 @@ namespace PPA_Core {
         User CreateUser(User user);
         User GetUser(User user);
         List<User> GetUsers();
+        public User GetUser(int id);
+        User UpdateUser(User user);
         void DeleteUser(int id);
     }
 }

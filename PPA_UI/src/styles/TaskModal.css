@@ -1,15 +1,19 @@
 .task_modal {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: initial;
@@ -24,23 +28,28 @@
 
 .task_modal .modal_window {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: start;
+  -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
   width: 500px;
   height: 400px;
   padding: 25px;
   z-index: 2;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
   background: #414150;
 }
 
@@ -70,18 +79,25 @@
 
 .task_modal .modal_window .who_where {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .task_modal .modal_window .who_where span {
@@ -92,8 +108,8 @@
 }
 
 .task_modal .modal_window .who_where select {
+  cursor: pointer;
   background: #414150;
-  height: 50px;
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -102,16 +118,20 @@
 
 .task_modal .modal_window .date_picker_part {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
@@ -126,26 +146,32 @@
 
 .task_modal .modal_window .date_picker_part .date_picker_holder {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   cursor: pointer;
   height: 35px;
   min-width: 95px;
   margin-left: 10px;
   padding: 0 10px;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
 }
 
 .task_modal .modal_window .date_picker_part .date_picker_holder .icon {
@@ -191,16 +217,20 @@
 
 .task_modal .modal_window .date_picker_part .remove_icon_holder {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
@@ -214,12 +244,14 @@
 
 .task_modal .modal_window .date_picker_part .remove_icon_holder .icon .outer {
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   fill: #50505a;
 }
 
 .task_modal .modal_window .date_picker_part .remove_icon_holder .icon .inner {
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   fill: #d7d7d7;
 }
@@ -260,16 +292,20 @@
 
 .task_modal .modal_window .submit_part {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
   height: 60px;
@@ -281,11 +317,13 @@
      -moz-appearance: button;
           appearance: button;
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   cursor: pointer;
   width: 125px;
   height: 40px;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
   background: #555569;
   color: white;
   font-size: 16px;

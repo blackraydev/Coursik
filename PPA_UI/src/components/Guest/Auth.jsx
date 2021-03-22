@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { LOGIN, REGISTER } from "../../services/authConstants";
+import { LOGIN, REGISTER } from "../../constants/authConstants";
 import { ShowIcon, HideIcon } from "../Common/Icons";
-import { EXISTINGEMAIL, INVALIDDATA, MINPASSWORDLENGTH, NOERROR, PASSWORDDONTMATCH, UNKNOWNERROR } from "../../services/errorConstants";
-import { loginRequest, registerRequest } from "../../services/auth";
+import { EXISTINGEMAIL, INVALIDDATA, MINPASSWORDLENGTH, NOERROR, PASSWORDDONTMATCH, UNKNOWNERROR } from "../../constants/errorConstants";
+import { loginRequest, registerRequest } from "../../services/authServices";
 import { useHistory } from "react-router-dom";
 import "../../styles/Auth.css";
 
@@ -28,6 +28,7 @@ const Auth = ({ authMethod }) => {
         setError(NOERROR);
         return false;
     }
+    
     const showError = e => {
         setError(e);
         return true;
@@ -74,7 +75,7 @@ const Auth = ({ authMethod }) => {
             .then((data) => {
                 setUserId(data.newUser.id);
                 setToken(data.token.accessToken);
-                switchRoute(`/home/settings/${data.newUser.id}`);
+                switchRoute(`/home/${data.newUser.id}/profile`);
                 hideError();
             })
             .catch(() => showError(EXISTINGEMAIL));
@@ -82,17 +83,17 @@ const Auth = ({ authMethod }) => {
 
     const setUserId = userId => {
         const id = "id";
-        sessionStorage.setItem(id, userId);
+        localStorage.setItem(id, userId);
     }
 
     const setToken = accessToken => {
         const token = "accessToken";
-        sessionStorage.setItem(token, accessToken);
+        localStorage.setItem(token, accessToken);
     }
 
     const getToken = () => {
         const token = "accessToken";
-        return sessionStorage.getItem(token); 
+        return localStorage.getItem(token); 
     }
 
     const switchRoute = url => history.push(url);

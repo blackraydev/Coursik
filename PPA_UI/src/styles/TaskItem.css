@@ -1,18 +1,23 @@
 .task_item {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   font-size: 14px;
   font-weight: 300;
@@ -29,16 +34,20 @@
 
 .task_item .content_holder {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
@@ -48,16 +57,20 @@
 
 .task_item .content_holder .text_holder {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -69,16 +82,20 @@
 
 .task_item .content_holder .date_holder {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   margin-right: 15px;
@@ -98,21 +115,26 @@
 
 .task_item .icon_holder {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
   margin-left: 15px;
-  border-radius: 100%;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
   width: 19px;
   height: 19px;
 }
@@ -120,21 +142,25 @@
 .task_item .icon_holder .icon-task {
   width: 19px;
   height: 19px;
-  border-radius: 100%;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
   border: 1px solid white;
   background: white;
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
 .task_item .icon_holder .icon-task .outer {
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   fill: white;
 }
 
 .task_item .icon_holder .icon-task .inner {
   -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   fill: #5c636d;
 }

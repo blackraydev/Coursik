@@ -3,7 +3,7 @@ import Description from "./Description";
 import { Route, Switch } from "react-router-dom";
 import Auth from "./Auth";
 import NavBar from "./NavBar";
-import { LOGIN, REGISTER } from "../../services/authConstants";
+import { LOGIN, REGISTER } from "../../constants/authConstants";
 import "../../styles/GuestApp.css";
 
 const GuestApp = () => {

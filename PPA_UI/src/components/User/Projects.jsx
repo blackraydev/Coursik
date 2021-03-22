@@ -1,40 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/Projects.css";
-import { HideTriangleIcon, ShowTriangleIcon } from "../Common/Icons";
+import ProjectModal from "./ProjectModal";
+import { useDispatch, useSelector } from "react-redux";
+import { getProjectsRequest } from "../../services/projectServices";
+import { COLLABORATIVE, YOUR } from "../../constants/projectConstants";
+import ProjectHandler from "./ProjectHandler";
 
-const Projects = () => {
-    const ProjectHandler = ({ title }) => {
-        const [hideProjects, setHideProjects] = useState(false);
+const Projects = ({ setTab }) => {
+    const userId = localStorage.getItem("id");
+    const dispatch = useDispatch();
+    const [openModal, setOpenModal] = useState(false);
 
-        return(
-            <div className="project_handler">
-                <div className="title_handler">
-                    <span onClick={() => setHideProjects(!hideProjects)} className="title">
-                        { hideProjects ? <HideTriangleIcon/> : <ShowTriangleIcon/> }
-                        { title }
-                    </span>
-                </div>
-                <div className={hideProjects ? "projects projects-hidden" : "projects"}>
-                    <ProjectItem title="IT Project Plan"/>
-                    <ProjectItem title="IT Requests"/>
-                </div>
-            </div>
-        )
-    }
-
-    const ProjectItem = ({ title }) => {
-        return(
-            <div className="project">
-                <div className="img_holder"></div>
-                <div className="project_title">{title}</div>
-            </div>
-        );
-    }
+    useEffect(() => getProjectsRequest(userId, dispatch), []);
 
     return(
         <div className="projects_component">
-            <ProjectHandler title="Your projects"/>
-            <ProjectHandler title="Colaborative projects"/>
+            { openModal ? <ProjectModal closeModal={() => setOpenModal(false)} /> : null }
+            <ProjectHandler setOpenModal={setOpenModal} setTab={setTab} type={YOUR} title="Your projects"/>
+            <ProjectHandler setOpenModal={setOpenModal} setTab={setTab} type={COLLABORATIVE} title="Collaborative projects"/>
         </div>
     )
 }

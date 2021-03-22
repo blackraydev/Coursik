@@ -6,6 +6,9 @@ namespace PPA_DB {
         [Key]
         public int Id { get; set; }
         public int User_Id { get; set; }
+        public int? Project_Id { get; set; }
+        public string Category { get; set; }
+        public int Priority { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime? Assign_Date { get; set; }

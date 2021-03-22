@@ -30,6 +30,8 @@ namespace PPA_API {
             services.AddTransient<IUserServices, UserServices>();
             services.AddTransient<ITokenServices, TokenServices>();
             services.AddTransient<ITaskServices, TaskServices>();
+            services.AddTransient<IProjectServices, ProjectServices>();
+            services.AddTransient<IProjectPointServices, ProjectPointServices>();
             services.AddCors(options => 
                 options.AddPolicy("Policy", builder =>
                     builder.WithOrigins("*")
@@ -49,12 +51,17 @@ namespace PPA_API {
                         IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
                         ValidateIssuerSigningKey = true,
                     };
-                });
+                })
+                .AddCertificate();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
+            }
+            else {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();

@@ -1,5 +1,5 @@
 import axios from "axios"
-import { createTask, deleteTask, getTasks, updateTask } from "../redux/actions"
+import { createTask, deleteTask, getTasks, updateTask, updateTasksStatus } from "../redux/tasksActions"
 
 const axiosInstance = axios.create({
     baseURL: "https://localhost:5001/api/tasks"
@@ -26,5 +26,11 @@ export const updateTaskRequest = async (task, dispatch) => {
 export const deleteTaskRequest = async (taskId, dispatch) => {
     return await axiosInstance.delete(`/${taskId}`)
         .then(response => dispatch(deleteTask(response.data)))
+        .catch(e => { throw e } );
+}
+
+export const updateTasksStatusRequest = async (tasks, dispatch) => {
+    return await axiosInstance.post("/update_status", tasks)
+        .then(response => dispatch(updateTasksStatus(response.data)))
         .catch(e => { throw e } );
 }

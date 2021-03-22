@@ -44,10 +44,20 @@ namespace PPA_API.Controllers {
             
             return Ok(new { newUser, token });
         }
+
+        [HttpPost("update")]
+        public IActionResult Update(User user) {
+            return Ok(_userServices.UpdateUser(user));
+        }
         
         [HttpGet]
         public IActionResult GetUsers() {
             return Ok(_userServices.GetUsers());
+        }
+        
+        [HttpGet("{id}")]
+        public IActionResult GetUser(int id) {
+            return Ok(_userServices.GetUser(id));
         }
 
         [HttpDelete("{id}")]

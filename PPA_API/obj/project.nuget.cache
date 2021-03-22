@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WQ/EX9SJf4DfeayJtvupoVOeHAIDj/ayf4UgGUvpEPd42RJqexuTSm5U/CQZgS7voc5NzADMASGbr95c6pKy6w==",
+  "dgSpecHash": "uDA381blD8wkKAvE4/z3JejAgYhqLwbKmoAfVDjfrLkCL7BmwacwljENexrL9WQze03R30Q292bDxvy19pCl3g==",
   "success": true,
-  "projectFilePath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_API/PPA_API.csproj",
+  "projectFilePath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_API/PPA_API.csproj",
   "expectedPackageFiles": [
+    "/Users/ramilsagidullin/.nuget/packages/microsoft.aspnetcore.authentication.certificate/5.0.4/microsoft.aspnetcore.authentication.certificate.5.0.4.nupkg.sha512",
     "/Users/ramilsagidullin/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.0/microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "/Users/ramilsagidullin/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/5.0.0/microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "/Users/ramilsagidullin/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

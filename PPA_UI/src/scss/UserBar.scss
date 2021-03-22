@@ -5,7 +5,7 @@
     @include flexCenter(row, center, space-between);
 
     width: 100%;
-    height: 20%;
+    height: 15%;
     padding: 50px 75px 25px 75px;
 
     .tab_handler {
@@ -18,9 +18,23 @@
     }
 
     .icons {
-        @include flexCenter(row, center, space-between);
+        @include flexCenter(row, center, flex-end);
 
-        width: 25%;
+        width: 50%;
+
+        .icon_holder {
+            @include flexCenter(row, center, center);
+
+            margin: 0 35px;
+        }
+
+        .project_switch_mode_handler {
+            @include flexCenter(row, center, center);
+        }
+
+        .project_info_handler {
+            @include flexCenter(row, center, center);
+        }
 
         .add_handler {
             @include flexCenter(row, center, center);
@@ -31,8 +45,8 @@
                 position: absolute;
                 top: 150%;
                 width: 110px;
-                background: rgb(65, 65, 80);
-                color: rgb(141, 144, 165);
+                background: rgb(60, 60, 75);
+                color: rgb(140, 145, 165);
                 border-radius: 15px;
 
                 div {
@@ -50,7 +64,7 @@
                         margin: 0 10px;
 
                         .outer {
-                            fill: rgb(65, 65, 80);
+                            fill: rgb(60, 60, 75);
                         }
                     }
 
@@ -78,7 +92,7 @@
                     }
                 }
 
-                .task {
+                .task_point {
                     .icon {
                         border: 1px solid rgb(141, 144, 165);
                         border-radius: 100%;
@@ -97,7 +111,7 @@
                     top: -18%;
                     left: 42.5%;
                     border: 8px solid transparent;
-                    border-bottom: 8px solid rgb(65, 65, 80);
+                    border-bottom: 8px solid rgb(60, 60, 75);
                     z-index: 0;
                 }
             }
@@ -122,13 +136,14 @@
         .avatar_handler {
             @include flexCenter(row, center, center);
 
+            margin-left: 35px;
             width: 75px;
             height: 75px;
             border-radius: 50px;
             overflow: hidden;
 
             .avatar {
-                width: 100px;
+                width: 75px;
                 height: 75px;
             }
         }

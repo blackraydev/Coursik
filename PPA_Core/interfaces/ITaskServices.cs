@@ -3,9 +3,10 @@ using PPA_DB;
 
 namespace PPA_Core {
     public interface ITaskServices {
-        List<Task> GetTasks(int id);
+        List<Task> GetTasks(int userId);
         Task CreateTask(Task task);
         Task UpdateTask(Task task);
-        Task DeleteTask(int id);
+        int DeleteTask(int id);
+        List<Task> UpdateTasksStatus(Task[] tasks);
     }
 }

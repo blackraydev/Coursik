@@ -34,6 +34,21 @@ namespace PPA_Core {
             return _context.Users.ToList();
         }
 
+        public User GetUser(int id) {
+            var user = _context.Users.FirstOrDefault(tempUser => tempUser.Id == id);
+            return user;
+        }
+
+        public User UpdateUser(User user) {
+            var updatedUser = _context.Users.FirstOrDefault(tempUser => tempUser.Id == user.Id);
+
+            _context.Users.Remove(updatedUser);
+            _context.Users.Add(user);
+            _context.SaveChanges();
+
+            return user;
+        }
+
         public void DeleteUser(int id) {
             var deletedUser =_context.Users.First(user => user.Id == id);
             _context.Users.Remove(deletedUser);

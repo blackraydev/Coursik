@@ -1,32 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { HideTriangleIcon, ShowTriangleIcon } from "../Common/Icons";
-import { RECENTLYASSIGNED, TODAY, UPCOMING, LATER } from "../../constants/taskConstants";
+import { TODAY, UPCOMING, LATER, NODATE, OVERDUE } from "../../constants/taskConstants";
 import TaskItem from "./TaskItem";
 import { getTasksRequest } from "../../services/taskServices";
 import "../../styles/Tasks.css";
 
 const Tasks = () => {
-    const tasks = useSelector(store => store);
-    const userId = sessionStorage.getItem("id");
+    const tasks = useSelector(store => store.tasks);
+    const userId = localStorage.getItem("id");
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        getTasksRequest(userId, dispatch);
-    }, []);
+    useEffect(() => getTasksRequest(userId, dispatch), []);
 
     const TaskHandler = ({ type }) => {
         const [hideTaskHandler, setHideTaskHandler] = useState(false);
 
         const renderTasks = () => {
-            if (type === RECENTLYASSIGNED) { 
-                return tasks.sort((taskA, taskB) => new Date(taskB.assign_Date) - new Date(taskA.assign_Date))
-                            .map(task => <TaskItem key={task.id} task={task} />);
+            const currentDate = new Date();
+
+            if (type === OVERDUE) {
+                return tasks.sort((taskA, taskB) => new Date(taskA.due_Date) - new Date(taskB.due_Date))
+                            .map(task => {
+                    const taskDate = new Date(task.due_Date);
+                    const diff = Math.ceil((taskDate - currentDate) / (1000 * 3600 * 24));
+                    
+                    if (task.due_Date && diff < 0) return <TaskItem key={task.id} task={task} />
+                });
             }
 
             if (type === TODAY) {
                 return tasks.map(task => {
-                    const currentDate = new Date();
                     const taskDate = new Date(task.due_Date);
                     const isToday = taskDate.getDate() === currentDate.getDate() && taskDate.getMonth() === currentDate.getMonth() && taskDate.getFullYear() === currentDate.getFullYear();
 
@@ -37,12 +41,25 @@ const Tasks = () => {
             if (type === UPCOMING) {
                 return tasks.sort((taskA, taskB) => new Date(taskA.due_Date) - new Date(taskB.due_Date))
                             .map(task => {
-                    const currentDate = new Date();
-                    const dueDate = new Date(task.due_Date);
-                    const diff = Math.ceil((dueDate - currentDate) / (1000 * 3600 * 24));
-                                
-                    if (diff < 5) return <TaskItem key={task.id} task={task} />
+                    const taskDate = new Date(task.due_Date);
+                    const diff = Math.ceil((taskDate - currentDate) / (1000 * 3600 * 24));
+                    
+                    if (diff > 0 && diff < 7) return <TaskItem key={task.id} task={task} />
                 });
+            }
+
+            if (type == LATER) {
+                return tasks.sort((taskA, taskB) => new Date(taskA.due_Date) - new Date(taskB.due_Date))
+                            .map(task => {
+                    const taskDate = new Date(task.due_Date);
+                    const diff = Math.ceil((taskDate - currentDate) / (1000 * 3600 * 24));
+                    
+                    if (diff >= 7) return <TaskItem key={task.id} task={task} />
+                });
+            }
+
+            if (type === NODATE) { 
+                return tasks.map(task => !task.due_Date ? <TaskItem key={task.id} task={task} /> : null);
             }
         }
 
@@ -63,10 +80,11 @@ const Tasks = () => {
 
     return(
         <div className="tasks_component">
-            <TaskHandler type={RECENTLYASSIGNED}/>
+            <TaskHandler type={OVERDUE}/>
             <TaskHandler type={TODAY}/>
             <TaskHandler type={UPCOMING}/>
             <TaskHandler type={LATER}/>
+            <TaskHandler type={NODATE}/>
         </div>
     )
 }

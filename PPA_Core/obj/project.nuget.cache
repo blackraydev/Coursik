@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GHhTaWnOVgGM0AWNYZsyAORuyRgjJoxA4iYZ+NXEQ77ZmyfOnxgcQ8/csnZnD/XNpHH796eJmDyOTY3evaG8GQ==",
+  "dgSpecHash": "XtnByipnEsUF+bvinMt/TvPvFTMAg/zhpIlihnzWbUlIBlokgIIh1lT3VvXepra1lbPjTz8+UHQgjwOgok7G8Q==",
   "success": true,
-  "projectFilePath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/PPA_Core.csproj",
+  "projectFilePath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_Core/PPA_Core.csproj",
   "expectedPackageFiles": [
     "/Users/ramilsagidullin/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/ramilsagidullin/.nuget/packages/microsoft.entityframeworkcore/5.0.2/microsoft.entityframeworkcore.5.0.2.nupkg.sha512",

@@ -948,11 +948,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/PPA_Core.csproj",
+      "projectUniqueName": "/Applications/MyFiles/Web/ProjectPlanning/PPA_Core/PPA_Core.csproj",
       "projectName": "PPA_Core",
-      "projectPath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/PPA_Core.csproj",
+      "projectPath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_Core/PPA_Core.csproj",
       "packagesPath": "/Users/ramilsagidullin/.nuget/packages/",
-      "outputPath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/obj/",
+      "outputPath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ramilsagidullin/.nuget/NuGet/NuGet.Config"
@@ -967,8 +967,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/PPA_DB.csproj": {
-              "projectPath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/PPA_DB.csproj"
+            "/Applications/MyFiles/Web/ProjectPlanning/PPA_DB/PPA_DB.csproj": {
+              "projectPath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_DB/PPA_DB.csproj"
             }
           }
         }
@@ -1003,7 +1003,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/ramilsagidullin/.dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }

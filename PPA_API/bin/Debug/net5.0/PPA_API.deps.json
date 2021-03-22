@@ -25,6 +25,7 @@
     ".NETCoreApp,Version=v5.0": {
       "PPA_API/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Certificate": "5.0.4",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.0",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "5.0.0",
           "PPA_Core": "1.0.0",
@@ -317,6 +318,20 @@
         },
         "compile": {
           "PPA_API.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Certificate/5.0.4": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "5.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "assemblyVersion": "5.0.4.0",
+            "fileVersion": "5.0.421.11815"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
@@ -2356,6 +2371,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/5.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ij1VoOjIeUdquqb+kStlZVFSNmtZvMbdfGEwKejBPYLlIAbBT9oekV9Log8z9CjddPAJZBSiAaXjwYqBzY2P9w==",
+      "path": "microsoft.aspnetcore.authentication.certificate/5.0.4",
+      "hashPath": "microsoft.aspnetcore.authentication.certificate.5.0.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
       "type": "package",

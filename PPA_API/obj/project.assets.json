@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Microsoft.AspNetCore.Authentication.Certificate/5.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -441,6 +456,21 @@
     }
   },
   "libraries": {
+    "Microsoft.AspNetCore.Authentication.Certificate/5.0.4": {
+      "sha512": "Ij1VoOjIeUdquqb+kStlZVFSNmtZvMbdfGEwKejBPYLlIAbBT9oekV9Log8z9CjddPAJZBSiAaXjwYqBzY2P9w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.certificate/5.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net5.0/Microsoft.AspNetCore.Authentication.Certificate.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Authentication.Certificate.xml",
+        "microsoft.aspnetcore.authentication.certificate.5.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.certificate.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
       "sha512": "26WlfJsOB4QP3VsEVu5GGDSGm5wu6ikQqRUOaZ3BUmyGcMWsD28xFxPxFw4OszYgKpj54QYlyec19KcrEGkqDw==",
       "type": "package",
@@ -1258,6 +1288,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Microsoft.AspNetCore.Authentication.Certificate >= 5.0.4",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.0",
       "PPA_Core >= 1.0.0",
@@ -1271,11 +1302,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_API/PPA_API.csproj",
+      "projectUniqueName": "/Applications/MyFiles/Web/ProjectPlanning/PPA_API/PPA_API.csproj",
       "projectName": "PPA_API",
-      "projectPath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_API/PPA_API.csproj",
+      "projectPath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_API/PPA_API.csproj",
       "packagesPath": "/Users/ramilsagidullin/.nuget/packages/",
-      "outputPath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_API/obj/",
+      "outputPath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ramilsagidullin/.nuget/NuGet/NuGet.Config"
@@ -1290,11 +1321,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/PPA_Core.csproj": {
-              "projectPath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_Core/PPA_Core.csproj"
+            "/Applications/MyFiles/Web/ProjectPlanning/PPA_Core/PPA_Core.csproj": {
+              "projectPath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_Core/PPA_Core.csproj"
             },
-            "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/PPA_DB.csproj": {
-              "projectPath": "/Users/ramilsagidullin/RiderProjects/ProjectPlanningApp/PPA_DB/PPA_DB.csproj"
+            "/Applications/MyFiles/Web/ProjectPlanning/PPA_DB/PPA_DB.csproj": {
+              "projectPath": "/Applications/MyFiles/Web/ProjectPlanning/PPA_DB/PPA_DB.csproj"
             }
           }
         }
@@ -1309,6 +1340,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Certificate": {
+            "target": "Package",
+            "version": "[5.0.4, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.0, )",
@@ -1346,7 +1381,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/ramilsagidullin/.dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }
