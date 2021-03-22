@@ -1,0 +1,55 @@
+@import "./mixins";
+@import "./variables";
+
+.project_handler {
+    color: white;
+    font-size: 18px;
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .title_handler {
+        @include flexCenter(row, center, flex-start);
+
+        padding: 10px 0;
+
+        .title {
+            cursor: pointer;
+        }
+    }
+
+    .projects {
+        @include flexCenter(row, center, flex-start);
+
+        transition: 0.25s ease-out;
+        width: 950px;
+        overflow: scroll;
+
+        .project_item_holder {
+            @include flexCenter(column, center, center);
+
+            color: white;
+            margin-top: 5px;
+            margin-right: 50px;
+            border-radius: 25px;
+            max-width: 150px;
+        }
+    }
+
+    .projects-hidden {
+        height: 0;
+    }
+
+    ::-webkit-scrollbar { 
+        display: none; 
+    }
+
+    .icon {
+        fill: rgb(161, 156, 156);
+        width: 20px;
+        height: 20px;
+        transform: translateY(4px);
+        margin-right: 10px;
+    }
+}

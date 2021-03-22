@@ -1,0 +1,181 @@
+.project_points_modal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: initial;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.project_points_modal .modal_window {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 500px;
+  height: 350px;
+  padding: 25px 25px 35px 25px;
+  z-index: 2;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  background: #414150;
+  overflow: scroll;
+}
+
+.project_points_modal .modal_window .textbox {
+  width: 100%;
+}
+
+.project_points_modal .modal_window .textbox .line {
+  background: inherit;
+  height: 50px;
+  font-size: 16px;
+  color: white;
+}
+
+.project_points_modal .modal_window .textbox .line::-webkit-input-placeholder {
+  color: #787882;
+}
+
+.project_points_modal .modal_window .textbox .line:-ms-input-placeholder {
+  color: #787882;
+}
+
+.project_points_modal .modal_window .textbox .line::-ms-input-placeholder {
+  color: #787882;
+}
+
+.project_points_modal .modal_window .textbox .line::placeholder {
+  color: #787882;
+}
+
+.project_points_modal .modal_window .textarea {
+  width: 100%;
+}
+
+.project_points_modal .modal_window .textarea .box {
+  background: #414150;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+
+.project_points_modal .modal_window .textarea .box::-webkit-input-placeholder {
+  color: #787882;
+}
+
+.project_points_modal .modal_window .textarea .box:-ms-input-placeholder {
+  color: #787882;
+}
+
+.project_points_modal .modal_window .textarea .box::-ms-input-placeholder {
+  color: #787882;
+}
+
+.project_points_modal .modal_window .textarea .box::placeholder {
+  color: #787882;
+}
+
+.project_points_modal .modal_window .title {
+  font-size: 16px;
+  color: #787882;
+  margin-right: 10px;
+}
+
+.project_points_modal .modal_window .submit_part {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 50px;
+  height: 60px;
+  width: 100%;
+}
+
+.project_points_modal .modal_window .submit_part button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  background: #555569;
+  color: white;
+  font-size: 16px;
+}
+
+.project_points_modal .modal_window .submit_part button:hover {
+  background: #49495d;
+  color: white;
+}
+
+.project_points_modal .modal_window .submit_part button:disabled {
+  cursor: unset;
+  background: #373746;
+  color: #737373;
+}
+
+.project_points_modal ::-webkit-scrollbar {
+  display: none;
+}
+
+.project_points_modal .overlay {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

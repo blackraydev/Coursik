@@ -1,0 +1,121 @@
+.submit_modal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: initial;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+}
+
+.submit_modal .modal_window {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  width: 450px;
+  height: 250px;
+  padding: 25px;
+  z-index: 2;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  background: #373746;
+  overflow: hidden;
+  color: white;
+}
+
+.submit_modal .modal_window h2 {
+  font-weight: 500;
+}
+
+.submit_modal .modal_window .text_block {
+  margin: 25px 0;
+}
+
+.submit_modal .modal_window .buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.submit_modal .modal_window .buttons button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  background: #555569;
+  color: white;
+  font-size: 16px;
+}
+
+.submit_modal .modal_window .buttons button:hover {
+  background: #49495d;
+  color: white;
+}
+
+.submit_modal .modal_window .buttons button:disabled {
+  cursor: unset;
+  background: #373746;
+  color: #737373;
+}
+
+.submit_modal .overlay {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

@@ -1,0 +1,173 @@
+.project_modal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: initial;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.project_modal .modal_window {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 500px;
+  height: 225px;
+  padding: 25px;
+  z-index: 2;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  background: #414150;
+  overflow: hidden;
+}
+
+.project_modal .modal_window .project_name {
+  background: inherit;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+}
+
+.project_modal .modal_window .project_name::-webkit-input-placeholder {
+  color: #787882;
+}
+
+.project_modal .modal_window .project_name:-ms-input-placeholder {
+  color: #787882;
+}
+
+.project_modal .modal_window .project_name::-ms-input-placeholder {
+  color: #787882;
+}
+
+.project_modal .modal_window .project_name::placeholder {
+  color: #787882;
+}
+
+.project_modal .modal_window .holder {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 35px;
+}
+
+.project_modal .modal_window .holder span {
+  font-weight: 300;
+  font-size: 16px;
+  color: #787882;
+}
+
+.project_modal .modal_window .holder select {
+  cursor: pointer;
+  background: #414150;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 15px;
+}
+
+.project_modal .modal_window .submit_part {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 60px;
+  width: 100%;
+}
+
+.project_modal .modal_window .submit_part .submit_project {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  -webkit-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
+  background: #555569;
+  color: white;
+  font-size: 16px;
+}
+
+.project_modal .modal_window .submit_part .submit_project:hover {
+  background: #49495d;
+  color: white;
+}
+
+.project_modal .modal_window .submit_part .submit_project:disabled {
+  cursor: unset;
+  background: #373746;
+  color: #737373;
+}
+
+.project_modal .overlay {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

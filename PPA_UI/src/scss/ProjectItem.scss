@@ -1,0 +1,60 @@
+@import "./mixins";
+@import "./variables";
+
+.project {
+    @include flexCenter(column, center, flex-start);
+
+    cursor: pointer;
+    transition: 0.25s ease-out;
+    padding: 10px;
+    border-radius: 25px;
+    min-height: 200px;
+
+    .img_holder {
+        @include flexCenter(column, center, center);
+
+        width: 125px;
+        height: 125px;
+        border-radius: 25px;
+
+        .icon {
+            transition: .25s ease-out;
+            width: 50px;
+            height: 50px;
+            margin: 0;
+
+            .first_part {
+                fill: rgb(100, 100, 120);
+            }
+
+            .second_part {
+                fill: rgb(200, 200, 220);
+            }
+        }
+    }
+
+    .project_title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+.project_item {
+    .img_holder {
+        background: rgb(65, 65, 80);
+
+        .icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    
+    &:hover {
+        transform: translateY(-2.5px);
+
+        .icon {
+            transform: translateY(-4px);
+        }
+    }
+}
