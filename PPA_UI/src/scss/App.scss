@@ -20,5 +20,6 @@
     @include flexCenter(column, center, center);
 
     background: rgb(80, 80, 95);
-    height: 900px;
+    min-height: 740px;
+    height: 100vh;
 }
