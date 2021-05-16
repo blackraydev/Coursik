@@ -14,7 +14,7 @@ import { getRequest } from "../../services/authServices";
 const UserBar = ({ avatar, setAvatar, setMode, mode, setTab, tab }) => {
     const history = useHistory();
     const dispatch = useDispatch();
-    const userId = localStorage.getItem("id");
+    const userId = sessionStorage.getItem("id");
     const [canShowIcon, setCanShowIcon] = useState(false);
     const [showAddList, setShowAddList] = useState(false);
     const [openModal, setOpenModal] = useState(false);

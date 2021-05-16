@@ -7,8 +7,8 @@ const Description = () => {
         <div className="description">
             <h1>Manage and organise team works simply</h1>
             <p>
-                From the small stuff to the big picture, Coursik organizes work so teams are 
-                clear what to do, why it matters, and how to get it done.
+                From the small stuff to the big picture, Coursik organizes work so
+                teams are clear what to do, why it matters, and how to get it done.
             </p>
             <NavLink className="link" to="/register"> 
                 <button className="create-project">

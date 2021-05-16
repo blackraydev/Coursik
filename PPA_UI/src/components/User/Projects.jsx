@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/Projects.css";
 import ProjectModal from "./ProjectModal";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getProjectsRequest } from "../../services/projectServices";
 import { COLLABORATIVE, YOUR } from "../../constants/projectConstants";
 import ProjectHandler from "./ProjectHandler";
 
 const Projects = ({ setTab }) => {
-    const userId = localStorage.getItem("id");
+    const userId = sessionStorage.getItem("id");
     const dispatch = useDispatch();
     const [openModal, setOpenModal] = useState(false);
 

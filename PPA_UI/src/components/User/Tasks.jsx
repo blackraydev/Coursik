@@ -8,7 +8,7 @@ import "../../styles/Tasks.css";
 
 const Tasks = () => {
     const tasks = useSelector(store => store.tasks);
-    const userId = localStorage.getItem("id");
+    const userId = sessionStorage.getItem("id");
     const dispatch = useDispatch();
 
     useEffect(() => getTasksRequest(userId, dispatch), []);

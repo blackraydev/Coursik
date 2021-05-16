@@ -7,7 +7,7 @@ import ProjectItem from "./ProjectItem";
 import "../../styles/ProjectHandler.css";
 
 const ProjectHandler = ({ setOpenModal, setTab, type, title }) => {
-    const userId = localStorage.getItem("id");
+    const userId = sessionStorage.getItem("id");
     const [hideProjects, setHideProjects] = useState(false);
     const projects = useSelector(store => store.projects);
 

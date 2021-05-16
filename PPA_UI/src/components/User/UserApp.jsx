@@ -7,13 +7,13 @@ import { HomeIcon, LogoutIcon, ProfileIcon, ProjectIcon, TaskIcon } from "../Com
 import Tasks from "./Tasks";
 import Projects from "./Projects";
 import ProjectBoard from "./ProjectBoard";
-import "../../styles/UserApp.css";
 import { BOARD } from "../../constants/projectConstants";
 import Profile from "./Profile";
+import "../../styles/UserApp.css";
 import avatarPhoto from "../../img/avatar.jpg";
 
 const UserApp = () => {
-    const { id, projectId } = useParams();
+    const { id } = useParams();
     const [tab, setTab] = useState(getTab());
     const [mode, setMode] = useState(BOARD);
     const [avatar, setAvatar] = useState(avatarPhoto);
@@ -38,11 +38,11 @@ const UserApp = () => {
         const token = "accessToken";
         const userId = "id";
 
-        localStorage.removeItem(token)
-        localStorage.removeItem(userId);
+        sessionStorage.removeItem(token)
+        sessionStorage.removeItem(userId);
     }
 
-    const getUserId = () => localStorage.getItem("id");
+    const getUserId = () => sessionStorage.getItem("id");
 
     const CustomLink = ({ tabName, url, icon, logout, className }) => {
         return(

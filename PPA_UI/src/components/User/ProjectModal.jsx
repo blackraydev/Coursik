@@ -9,7 +9,7 @@ import "../../styles/ProjectModal.css";
 
 const ProjectModal = ({ setTab, closeModal }) => {
     const history = useHistory();
-    const userId = localStorage.getItem("id");
+    const userId = sessionStorage.getItem("id");
     const [projectName, setProjectName] = useState("");
     const [templateId, setTemplateId] = useState(1);
     const [privacy, setPrivacy] = useState(PUBLIC_TO_IT);
@@ -79,7 +79,7 @@ const ProjectModal = ({ setTab, closeModal }) => {
             .catch(e => console.log(e))
     }
 
-    const getUserId = () => localStorage.getItem("id");
+    const getUserId = () => sessionStorage.getItem("id");
 
     return(
         <div className="project_modal">

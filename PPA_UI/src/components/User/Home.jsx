@@ -12,7 +12,7 @@ const Home = ({ setTab }) => {
     const [hideTasks, setHideTasks] = useState(false);
     const dispatch = useDispatch();
     const tasks = useSelector(store => store.tasks);
-    const userId = localStorage.getItem("id");
+    const userId = sessionStorage.getItem("id");
 
     useEffect(() => getTasksRequest(userId, dispatch), []);
     useEffect(() => getProjectsRequest(userId, dispatch), []);

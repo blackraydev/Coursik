@@ -114,7 +114,7 @@ const TaskModal = ({ task, closeModal, type, category, currentProject, priority 
             .catch(e => console.log(e));
     }
 
-    const getUserId = () => localStorage.getItem("id");
+    const getUserId = () => sessionStorage.getItem("id");
 
     const removeDueDateHandler = () => {
         setDueDate(null);

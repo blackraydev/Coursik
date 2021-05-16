@@ -83,17 +83,17 @@ const Auth = ({ authMethod }) => {
 
     const setUserId = userId => {
         const id = "id";
-        localStorage.setItem(id, userId);
+        sessionStorage.setItem(id, userId);
     }
 
     const setToken = accessToken => {
         const token = "accessToken";
-        localStorage.setItem(token, accessToken);
+        sessionStorage.setItem(token, accessToken);
     }
 
     const getToken = () => {
         const token = "accessToken";
-        return localStorage.getItem(token); 
+        return sessionStorage.getItem(token); 
     }
 
     const switchRoute = url => history.push(url);

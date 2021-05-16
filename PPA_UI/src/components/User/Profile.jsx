@@ -6,8 +6,8 @@ import { HideIcon, ShowIcon } from "../Common/Icons";
 import "../../styles/Profile.css";
 import axios from "axios";
 
-const Profile = ({ setAvatar, avatar }) => {
-    const userId = localStorage.getItem("id");
+const Profile = ({ setAvatar }) => {
+    const userId = sessionStorage.getItem("id");
     const [surname, setSurname] = useState("");
     const [name, setName] = useState("");
     const [patronymic, setPatronymic] = useState("");
