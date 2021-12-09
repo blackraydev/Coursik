@@ -268,7 +268,7 @@ const ProjectBoard = ({ selectProjectMode, setTab }) => {
                          onDragEnter={dragging && !board.tasks.length ? e => handleDragEnter(e, { boardId: index, taskId: 0 }) : null}
                          onDragOver={handleDragOver}
                     >
-                        { board.tasks.map((task, taskIndex) => <ProjectTaskItem boardId={index} taskId={taskIndex} task={task} key={`${index}_${taskIndex}`} />) }
+                        { board.tasks.map((task, taskIndex) => task && <ProjectTaskItem boardId={index} taskId={taskIndex} task={task} key={`${index}_${taskIndex}`} />) }
                         <CreateProjectTaskItem category={board.title} priority={board.tasks.length}/>
                     </div>
                 </div>
