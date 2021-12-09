@@ -1,8 +1,9 @@
 import axios from "axios"
 import { createTask, deleteTask, getTasks, updateTask, updateTasksStatus } from "../redux/tasksActions"
+import { API_URL } from "../constants/api";
 
 const axiosInstance = axios.create({
-    baseURL: "https://localhost:5001/api/tasks"
+    baseURL: `${API_URL}/tasks`
 })
 
 export const getTasksRequest = async (userId, dispatch) => {

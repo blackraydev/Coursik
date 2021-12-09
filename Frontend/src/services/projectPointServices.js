@@ -1,8 +1,9 @@
 import axios from "axios";
 import { getProjectPoints, createProjectPoints, updateProjectPoints } from "../redux/projectPointsActions";
+import { API_URL } from "../constants/api";
 
 const axiosInstance = axios.create({
-    baseURL: "https://localhost:5001/api/projectPoints"
+    baseURL: `${API_URL}/projectPoints`
 })
 
 export const getProjectPointsRequest = async (projectId, dispatch) => {

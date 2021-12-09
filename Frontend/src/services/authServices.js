@@ -1,7 +1,8 @@
 import axios from "axios"
+import { API_URL } from "../constants/api";
 
 const axiosInstance = axios.create({
-    baseURL: "https://localhost:5001/api/users"
+    baseURL: `${API_URL}/users`
 })
 
 export const loginRequest = async (user) => {

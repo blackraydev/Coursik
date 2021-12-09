@@ -1,8 +1,9 @@
 import axios from "axios";
 import { getProjects, createProject, deleteProject, updateProject } from "../redux/projectsActions";
+import { API_URL } from "../constants/api";
 
 const axiosInstance = axios.create({
-    baseURL: "https://localhost:5001/api/projects"
+    baseURL: `${API_URL}/projects`
 })
 
 export const getProjectsRequest = async (userId, dispatch) => {

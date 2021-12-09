@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import axios from "axios";
 import { DATACHANGE, PASSWORDCHANGE } from "../../constants/authConstants";
 import { MINPASSWORDLENGTH, NOERROR, PASSWORDDONTMATCH, SUCCESS } from "../../constants/errorConstants";
 import { getRequest, updateRequest } from "../../services/authServices";
 import { HideIcon, ShowIcon } from "../Common/Icons";
+import avatarDefault from "../../img/avatar.jpg";
 import "../../styles/Profile.css";
-import axios from "axios";
 
 const Profile = ({ setAvatar }) => {
     const userId = sessionStorage.getItem("id");
@@ -159,7 +160,7 @@ const Profile = ({ setAvatar }) => {
                 <input className="file_choose" type="file" ref={inputFile} onChange={e => updateFileHandler(e)}/>
                 <div className="avatar_choose">
                     <button className="confirm" onClick={clickFileHandler}>Upload photo</button>
-                    <img className="avatar" src={photo}/>
+                    <img className="avatar" src={photo ? photo : avatarDefault}/>
                 </div>
                 <button onClick={() => updateProfileHandler(DATACHANGE)} className="confirm">Submit</button>
             </div>

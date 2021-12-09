@@ -10,6 +10,7 @@ import ProjectPointsModal from "./ProjectPointsModal";
 import ProjectModal from "./ProjectModal";
 import { BOARD, LIST } from "../../constants/projectConstants";
 import { getRequest } from "../../services/authServices";
+import avatarDefault from "../../img/avatar.jpg";
 
 const UserBar = ({ avatar, setAvatar, setMode, mode, setTab, tab }) => {
     const history = useHistory();
@@ -101,7 +102,7 @@ const UserBar = ({ avatar, setAvatar, setMode, mode, setTab, tab }) => {
                     <NotificationIcon/>
                 </div>
                 <div className="avatar_handler">
-                    <img className="avatar" src={avatar}></img>
+                    <img className="avatar" src={avatar ? avatar : avatarDefault}></img>
                 </div>
             </div>
         </div>
