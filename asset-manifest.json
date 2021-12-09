@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Coursik/static/css/main.58631291.chunk.css",
+    "main.js": "/Coursik/static/js/main.1abf1b4d.chunk.js",
+    "main.js.map": "/Coursik/static/js/main.1abf1b4d.chunk.js.map",
+    "runtime-main.js": "/Coursik/static/js/runtime-main.37b9ea8f.js",
+    "runtime-main.js.map": "/Coursik/static/js/runtime-main.37b9ea8f.js.map",
+    "static/js/2.f9611b9e.chunk.js": "/Coursik/static/js/2.f9611b9e.chunk.js",
+    "static/js/2.f9611b9e.chunk.js.map": "/Coursik/static/js/2.f9611b9e.chunk.js.map",
+    "index.html": "/Coursik/index.html",
+    "static/css/main.58631291.chunk.css.map": "/Coursik/static/css/main.58631291.chunk.css.map",
+    "static/js/2.f9611b9e.chunk.js.LICENSE.txt": "/Coursik/static/js/2.f9611b9e.chunk.js.LICENSE.txt",
+    "static/media/avatar.7726bfb2.jpg": "/Coursik/static/media/avatar.7726bfb2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37b9ea8f.js",
+    "static/js/2.f9611b9e.chunk.js",
+    "static/css/main.58631291.chunk.css",
+    "static/js/main.1abf1b4d.chunk.js"
+  ]
+}
